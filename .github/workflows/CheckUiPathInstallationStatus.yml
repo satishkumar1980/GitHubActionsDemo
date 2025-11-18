@@ -1,9 +1,9 @@
-- name: Check UiPath CLI Installation
-  run: |
-    if command -v uipcli > /dev/null; then
-      echo "UiPath CLI is installed."
-      uipcli --version
-    else
-      echo "UiPath CLI is NOT installed."
-      exit 1
-    fi
+name: Hello World Workflow
+'on':
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World!"
